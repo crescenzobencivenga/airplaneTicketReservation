@@ -5,8 +5,9 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
-/* Classe controller per l'interfaccia di acquisto dei biglietti
-@author bencivenga crescenzo, morlando pasquale
+/**
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* Classe controller per l'interfaccia di acquisto dei biglietti
 */
 
 public class AcquistaController   {
@@ -16,12 +17,14 @@ public class AcquistaController   {
     public Button btnPaypal;
 
     
-    /**concrete strategy Carta di credito
+    /**
+    * concrete strategy Carta di credito
     */
     public void acquistaCartaCredito(ActionEvent actionEvent) throws IOException { 
         pay(new CartaDiCreditoStrategy(),actionEvent);
     }
-    /**concrete strategy paypal
+    /**
+    * concrete strategy paypal
     */
     public void acquistaPaypal(ActionEvent actionEvent) throws IOException {  
         pay(new PaypalControllerStrategy(),actionEvent);
