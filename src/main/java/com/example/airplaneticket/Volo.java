@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 /**
+    @author Morlando Pasquale, Bencivenga Crescenzo
     Contiene le informazioni inerenti al volo
 */
 
