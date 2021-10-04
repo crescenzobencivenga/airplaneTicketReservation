@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 /**
+    @author Morlando Pasquale, Bencivenga Crescenzo
     Classe utilizzata per il cambio di view e caricamento della classe controller relativa
 */
 public class SceneChanger {
