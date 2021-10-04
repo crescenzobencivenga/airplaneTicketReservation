@@ -17,7 +17,7 @@ public class AggiuntaVoloController {
     public DatePicker dataPartenza;
     public DatePicker dataArrivo;
     public TextField capacita;
-    static CommandProxy aggiungiVolo = new CommandProxy(new AggiungiVoloCommand());
+    static CommandProxy aggiungiVolo = new CommandProxy(new AggiungiVoloCommand()); //proxy per l'accesso ai command
 
     // metodo collegato al button per l'aggiunta del volo
     public void aggiungiVolo(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
