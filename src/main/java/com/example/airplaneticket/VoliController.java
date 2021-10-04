@@ -46,7 +46,7 @@ public class VoliController implements Initializable {
     public ComboBox<String> destinazioneComboBox = new ComboBox<>(citta);
 
     
-    //Metodo Singleton per 
+    //Metodo utilizzato per inizializzare la taballa dei voli
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ResultSet rs = null;
