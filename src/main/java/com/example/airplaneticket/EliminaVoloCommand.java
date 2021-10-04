@@ -3,8 +3,10 @@ package com.example.airplaneticket;
 import java.sql.SQLException;
 
 
-/** classe che implementa i metodi per l'eliminazione dei voli
- */
+/**
+*    @author Morlando Pasquale, Bencivenga Crescenzo
+*   classe che implementa i metodi per l'eliminazione dei voli
+*/
 public class EliminaVoloCommand implements ICommandVoli{
     static Volo ultimoVolo;
 
@@ -17,7 +19,8 @@ public class EliminaVoloCommand implements ICommandVoli{
         ultimoVolo = v;
         con.deleteElement("DELETE FROM volo WHERE nVolo ="+v.getNVolo());
     }
-    /** override undo command per l'eleminazione di un volo
+    /** 
+    *   override undo command per l'eleminazione di un volo
     */
     @Override
     public void undoCommand() throws SQLException, ClassNotFoundException {
