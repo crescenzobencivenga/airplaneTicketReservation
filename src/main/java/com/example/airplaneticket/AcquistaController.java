@@ -5,17 +5,20 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
+/* Classe controller per l'interfaccia di acquisto dei biglietti
+*/
+
 public class AcquistaController   {
     public SceneChanger sceneChanger = new SceneChanger();
 
     public Button btnCartaDiCredito;
     public Button btnPaypal;
 
-    public void acquistaCartaCredito(ActionEvent actionEvent) throws IOException {
+    public void acquistaCartaCredito(ActionEvent actionEvent) throws IOException { //concrete strategy Carta di credito
         pay(new CartaDiCreditoStrategy(),actionEvent);
     }
 
-    public void acquistaPaypal(ActionEvent actionEvent) throws IOException {
+    public void acquistaPaypal(ActionEvent actionEvent) throws IOException {    //concrete strategy paypal
         pay(new PaypalControllerStrategy(),actionEvent);
     }
 
