@@ -9,7 +9,10 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.sql.SQLException;
 
-// Classe che implementa la strategia di pagamento con carta di credito
+/**
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* Classe che implementa la strategia di pagamento con carta di credito
+*/
 
 public class CartaDiCreditoStrategy implements IStrategiaPagamento {
     SceneChanger sceneChanger = new SceneChanger();
@@ -23,7 +26,7 @@ public class CartaDiCreditoStrategy implements IStrategiaPagamento {
     public void paga(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("cartaDiCredito-view.fxml",876,595,actionEvent);
     }
-    /*
+    /**
     * metodo collegato al button paga, visualizza un alert per la conferma del pagamento
     */
     public void effettuaPagamento(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
