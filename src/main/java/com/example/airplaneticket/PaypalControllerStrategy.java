@@ -26,6 +26,7 @@ public class PaypalControllerStrategy implements IStrategiaPagamento {
         sceneChanger.cambiaScena("paypal-view.fxml",742,544,actionEvent);
     }
     
+    //metodo collegato al pagamento con PayPal che conferma il pagamento
     public void effettuaPagamento(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
         Biglietto bi = Biglietto.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
