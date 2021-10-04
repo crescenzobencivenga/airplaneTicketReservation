@@ -38,8 +38,8 @@ public class GestioneVoliController implements Initializable {
     public int lastCommand;
     ICommandVoli commandProxy = new CommandProxy(new EliminaVoloCommand());
 
-    /*  
-        metodo per l'inizializzazione dei campi della tabella contenente i voli
+     /**  
+     *metodo per l'inizializzazione dei campi della tabella contenente i voli
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -76,8 +76,8 @@ public class GestioneVoliController implements Initializable {
     }
 
 
-    /*  
-        metodo per aggionare i campi della tabella una volta effettuate operazioni di inserimento o eliminazione di un volo
+    /**
+    *   metodo per aggionare i campi della tabella una volta effettuate operazioni di inserimento o eliminazione di un volo
     */
     public void AggiornaTabella(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         voli.clear();
@@ -92,7 +92,7 @@ public class GestioneVoliController implements Initializable {
 
     // metodo collegato al button elimina volo
     public void eliminaVolo(ActionEvent actionEvent) throws SQLException, ClassNotFoundException, NoSuchMethodException {
-        Volo v = tabellaVoli.getSelectionModel().getSelectedItem();;
+        Volo v = tabellaVoli.getSelectionModel().getSelectedItem();
         if (v != null) {
             commandProxy.executeCommand(v);
             AggiornaTabella(actionEvent);
