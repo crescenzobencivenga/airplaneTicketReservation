@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 
 
 /**
-    Classe per 
+    Classe controller dell'interfaccia dove vengono visualizzati i voli disponibili
 */
 
 public class VoliController implements Initializable {
