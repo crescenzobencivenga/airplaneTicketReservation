@@ -14,7 +14,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-/* classe controller per l'interfaccia che permette di visualizzare i biglietti acquistati
+/**
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* classe controller per l'interfaccia che permette di visualizzare i biglietti acquistati
 */
 
 public class BigliettiAcquistatiController implements Initializable {
