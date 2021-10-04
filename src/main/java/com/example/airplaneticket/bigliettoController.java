@@ -9,6 +9,9 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
+/**
+Classe per l'acqquisto del biglietto
+*/
 public class bigliettoController  implements Initializable{
     SceneChanger sceneChanger = new SceneChanger();
     @FXML
@@ -29,6 +32,7 @@ public class bigliettoController  implements Initializable{
     @FXML
     private TextField textPrezzo;
 
+    //Metodo per l'inizializzazione del biglietto
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Biglietto bi = Biglietto.getInstance();
@@ -39,7 +43,8 @@ public class bigliettoController  implements Initializable{
         textPrezzo.setText(bi.getPrezzo().toString());
         textNVolo.setText(String.valueOf(bi.getNVolo()));
     }
-
+    
+    //Metodo collegato al button acquista, per l'acquisto del biglietto
     public void acquistaBiglietto(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("acquista-view.fxml",697,550,actionEvent);
     }
