@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 /**
+    @author Morlando Pasquale, Bencivenga Crescenzo
     Classe che implementa una strategia di pagamento
 */
 
@@ -35,9 +36,9 @@ public class PaypalControllerStrategy implements IStrategiaPagamento {
         alert.showAndWait();
         Window window = username.getScene().getWindow();
         window.hide();
-        dbConnection.getInstance().insertQuery("Insert into bigliettiAcquistati values ('"+bi.getNVolo()+"','"+Utente.getInstance().getId()+"');");
-        int nuovaCapacita = dbConnection.getInstance().selectQuery("SELECT capacita FROM volo WHERE nVolo="+bi.getNVolo()+";").getInt("capacita") - 1;
-        dbConnection.getInstance().insertQuery("UPDATE volo SET capacita="+nuovaCapacita +" WHERE nVolo = "+bi.getNVolo()+";");
+        dbConnection.getInstance().insertQuery("Insert into bigliettiAcquistati values ('"+bi.getNVolo()+"','"+Utente.getInstance().getId()+"');");    //inserimento biglietto acquistato
+        int nuovaCapacita = dbConnection.getInstance().selectQuery("SELECT capacita FROM volo WHERE nVolo="+bi.getNVolo()+";").getInt("capacita") - 1; //riduzione capacità del volo
+        dbConnection.getInstance().insertQuery("UPDATE volo SET capacita="+nuovaCapacita +" WHERE nVolo = "+bi.getNVolo()+";");                        //
     }
 
 }
