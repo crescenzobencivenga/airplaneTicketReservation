@@ -3,6 +3,7 @@ package com.example.airplaneticket;
 import java.sql.*;
 
 /**
+        @author Morlando Pasquale, Bencivenga Crescenzo
         Classe Singleton per la connessione al database
     */
 
@@ -24,18 +25,27 @@ public class dbConnection { //receiver
             dbInstance = new dbConnection();
         return dbInstance;
     }
-    //Metodo per query di tipo inserimento dei dati nel database
+    /**
+    @param qu query passata come stringa
+    Metodo per query di tipo inserimento dei dati nel database
+    */
     public void insertQuery(String qu) throws SQLException {
         Statement statement = conn.createStatement();
         statement.executeUpdate(qu);
     }
-    //Metodo per query di tipo selezione all'interno del database
+    /**
+    @param qu query passata come stringa
+    Metodo per query di tipo selezione all'interno del database
+    */
     public ResultSet selectQuery(String qu) throws SQLException {
         Statement statement = conn.createStatement();
         ResultSet result = statement.executeQuery(qu);
         return result;
     }
-    //Metodo per query di tipo eliminazione all'interno del database
+    /**
+    @param qu query passata come stringa
+    Metodo per query di tipo eliminazione all'interno del database
+    */
     public void deleteElement(String qu) throws SQLException {
         Statement statement = conn.createStatement();
         statement.executeUpdate(qu);
