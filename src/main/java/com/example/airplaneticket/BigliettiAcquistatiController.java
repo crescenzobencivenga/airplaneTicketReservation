@@ -14,6 +14,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/* classe controller per l'interfaccia che permette di visualizzare i biglietti acquistati
+*/
+
 public class BigliettiAcquistatiController implements Initializable {
     SceneChanger sceneChanger = new SceneChanger();
     public TableColumn<Volo, Integer> colNumeroVolo;
@@ -29,8 +32,9 @@ public class BigliettiAcquistatiController implements Initializable {
         sceneChanger.cambiaScena("actions-view.fxml",1021,717,actionEvent);
     }
 
+    // metodo per l'inizializzazione dei campi della tabella contenente i biglietti
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {                    
         colPartenza.setCellValueFactory(new PropertyValueFactory<>("partenza"));
         colDestinazione.setCellValueFactory(new PropertyValueFactory<>("destinazione"));
         colDataArrivo.setCellValueFactory(new PropertyValueFactory<>("dataArrivo"));
