@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+    Classe utilizzata per il cambio di view e caricamento della classe controller relativa
+*/
 public class SceneChanger {
     public void cambiaScena(String scena,int width,int height, ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(scena));
