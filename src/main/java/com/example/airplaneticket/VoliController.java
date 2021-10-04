@@ -21,6 +21,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+
+/**
+    Classe per 
+*/
+
 public class VoliController implements Initializable {
     public Text textBigliettiEsauriti;
     SceneChanger sceneChanger = new SceneChanger();
@@ -40,6 +45,8 @@ public class VoliController implements Initializable {
     public ComboBox<String> partenzaComboBox = new ComboBox<>(citta);
     public ComboBox<String> destinazioneComboBox = new ComboBox<>(citta);
 
+    
+    //Metodo Singleton per 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ResultSet rs = null;
@@ -80,6 +87,7 @@ public class VoliController implements Initializable {
         }
     }
 
+    //Metodo per aggiornare i campi della tabella una volta selezionato un filtro
     public void AggiornaTabella(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         voli.clear();
         db = dbConnection.getInstance();
@@ -104,12 +112,12 @@ public class VoliController implements Initializable {
         tabellaVoli.setItems(voli);
     }
 
-
+    //Metodo per tornare all'interfaccia precedente
     public void indietroMenu(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("actions-view.fxml", 1021, 717, actionEvent);
     }
 
-
+    //metodo collegato al button visualizza biglietto
     public void visualizzaBiglietto(ActionEvent actionEvent) throws IOException {
         Biglietto bi = Biglietto.getInstance();
         Volo v = tabellaVoli.getSelectionModel().getSelectedItem();
