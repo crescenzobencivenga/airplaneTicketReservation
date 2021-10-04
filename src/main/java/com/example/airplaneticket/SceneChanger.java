@@ -12,6 +12,10 @@ import java.io.IOException;
     Classe utilizzata per il cambio di view e caricamento della classe controller relativa
 */
 public class SceneChanger {
+    
+    /** metodo per cambiare scena
+    * @param nuova scena, larghezza della finestra, altezza della finestra
+    */
     public void cambiaScena(String scena,int width,int height, ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(scena));
         Scene scene = new Scene(loader.load(), width, height);
