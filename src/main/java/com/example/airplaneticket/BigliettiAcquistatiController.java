@@ -27,7 +27,9 @@ public class BigliettiAcquistatiController implements Initializable {
     public TableView<Volo> tabellaBiglietti;
     private final ObservableList<Volo> biglietti = FXCollections.observableArrayList();
 
-
+    
+    /** metodo collegato al button indietro
+    */
     public void indietroMenu(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("actions-view.fxml",1021,717,actionEvent);
     }
