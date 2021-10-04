@@ -2,7 +2,9 @@ package com.example.airplaneticket;
 
 import java.sql.SQLException;
 
-/*  interfaccia command
+/**
+    @author Morlando Pasquale, Bencivenga Crescenzo
+    interfaccia command
 * */
 
 public interface ICommandVoli {
