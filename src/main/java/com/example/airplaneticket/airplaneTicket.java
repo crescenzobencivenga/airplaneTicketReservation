@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
-
+/**
+    @author Morlando Pasquale, Bencivenga Crescenzo
+*/
 
 public class airplaneTicket extends Application {
     @Override
