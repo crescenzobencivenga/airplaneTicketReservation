@@ -16,8 +16,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-/*  Controller class per l'interfaccia dell'admin
-* */
+/**
+    @author Morlando Pasquale, Bencivenga Crescenzo
+    Controller class per l'interfaccia dell'admin
+*/
 
 public class GestioneVoliController implements Initializable {
 
@@ -36,8 +38,9 @@ public class GestioneVoliController implements Initializable {
     public int lastCommand;
     ICommandVoli commandProxy = new CommandProxy(new EliminaVoloCommand());
 
-    /*  metodo per l'inizializzazione dei campi della tabella contenente i voli
-    * */
+    /*  
+        metodo per l'inizializzazione dei campi della tabella contenente i voli
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colPrezzo.setCellValueFactory(new PropertyValueFactory<>("prezzo"));
@@ -73,8 +76,9 @@ public class GestioneVoliController implements Initializable {
     }
 
 
-    /*  metodo per aggionare i campi della tabella una volta effettuate operazioni di inserimento o eliminazione di un volo
-    * */
+    /*  
+        metodo per aggionare i campi della tabella una volta effettuate operazioni di inserimento o eliminazione di un volo
+    */
     public void AggiornaTabella(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         voli.clear();
         dbConnection db = dbConnection.getInstance();
