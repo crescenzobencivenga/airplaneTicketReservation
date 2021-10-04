@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 /**
 @author Morlando Pasquale, Bencivenga Crescenzo
-Classe per l'acqquisto del biglietto
+Classe controller per l'interfaccia per l'acqquisto del biglietto
 */
 public class bigliettoController  implements Initializable{
     SceneChanger sceneChanger = new SceneChanger();
