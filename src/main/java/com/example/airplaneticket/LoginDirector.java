@@ -12,6 +12,8 @@ import java.io.IOException;
 public class LoginDirector {
     ILoginBuilder loginBuilder;
 
+    /** setter per loginBuilder
+    */
     public void setLoginBuilder(ILoginBuilder loginBuilder){
         this.loginBuilder = loginBuilder;
     }
