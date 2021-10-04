@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
+@author Morlando Pasquale, Bencivenga Crescenzo
 Classe per l'acqquisto del biglietto
 */
 public class bigliettoController  implements Initializable{
