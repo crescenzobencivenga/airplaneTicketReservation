@@ -46,7 +46,7 @@ public class VoliController implements Initializable {
     public ComboBox<String> destinazioneComboBox = new ComboBox<>(citta);
 
     
-    //Metodo utilizzato per inizializzare la taballa dei voli
+    //Metodo per l'inizializzazione dei campi della tabella contenente i voli
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ResultSet rs = null;
