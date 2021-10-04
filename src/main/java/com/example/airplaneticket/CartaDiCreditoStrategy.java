@@ -9,7 +9,7 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.sql.SQLException;
 
-// Classe che implementa una strategia di pagamento
+// Classe che implementa la strategia di pagamento con carta di credito
 
 public class CartaDiCreditoStrategy implements IStrategiaPagamento {
     SceneChanger sceneChanger = new SceneChanger();
@@ -24,7 +24,7 @@ public class CartaDiCreditoStrategy implements IStrategiaPagamento {
         sceneChanger.cambiaScena("cartaDiCredito-view.fxml",876,595,actionEvent);
     }
     /*
-    * metodo collegato al button paga, visualizza un alert 
+    * metodo collegato al button paga, visualizza un alert per la conferma del pagamento
     */
     public void effettuaPagamento(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
         Biglietto bi = Biglietto.getInstance();
@@ -34,8 +34,8 @@ public class CartaDiCreditoStrategy implements IStrategiaPagamento {
         alert.showAndWait();
         Window window = btnPaga.getScene().getWindow();
         window.hide();
-        dbConnection.getInstance().insertQuery("Insert into bigliettiAcquistati values ('"+bi.getNVolo()+"','"+Utente.getInstance().getId()+"');");
-        int nuovaCapacita = dbConnection.getInstance().selectQuery("SELECT capacita FROM volo WHERE nVolo="+bi.getNVolo()+";").getInt("capacita") - 1;
-        dbConnection.getInstance().insertQuery("UPDATE volo SET capacita="+nuovaCapacita +" WHERE nVolo = "+bi.getNVolo()+";");
+        dbConnection.getInstance().insertQuery("Insert into bigliettiAcquistati values ('"+bi.getNVolo()+"','"+Utente.getInstance().getId()+"');");    //inserimento biglietto acquistato
+        int nuovaCapacita = dbConnection.getInstance().selectQuery("SELECT capacita FROM volo WHERE nVolo="+bi.getNVolo()+";").getInt("capacita") - 1; //riduzione capacità del volo
+        dbConnection.getInstance().insertQuery("UPDATE volo SET capacita="+nuovaCapacita +" WHERE nVolo = "+bi.getNVolo()+";");                        //
     }
 }
