@@ -9,6 +9,8 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.sql.SQLException;
 
+// Classe che implementa una strategia di pagamento
+
 public class CartaDiCreditoStrategy implements IStrategiaPagamento {
     SceneChanger sceneChanger = new SceneChanger();
     public Button btnPaga;
@@ -21,7 +23,9 @@ public class CartaDiCreditoStrategy implements IStrategiaPagamento {
     public void paga(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("cartaDiCredito-view.fxml",876,595,actionEvent);
     }
-
+    /*
+    * metodo collegato al button paga, visualizza un alert 
+    */
     public void effettuaPagamento(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
         Biglietto bi = Biglietto.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
