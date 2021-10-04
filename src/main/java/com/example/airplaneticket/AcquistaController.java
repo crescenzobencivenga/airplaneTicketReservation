@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import java.io.IOException;
 
 /* Classe controller per l'interfaccia di acquisto dei biglietti
+@author bencivenga crescenzo, morlando pasquale
 */
 
 public class AcquistaController   {
@@ -14,14 +15,18 @@ public class AcquistaController   {
     public Button btnCartaDiCredito;
     public Button btnPaypal;
 
-    public void acquistaCartaCredito(ActionEvent actionEvent) throws IOException { //concrete strategy Carta di credito
+    
+    /**concrete strategy Carta di credito
+    */
+    public void acquistaCartaCredito(ActionEvent actionEvent) throws IOException { 
         pay(new CartaDiCreditoStrategy(),actionEvent);
     }
-
-    public void acquistaPaypal(ActionEvent actionEvent) throws IOException {    //concrete strategy paypal
+    /**concrete strategy paypal
+    */
+    public void acquistaPaypal(ActionEvent actionEvent) throws IOException {  
         pay(new PaypalControllerStrategy(),actionEvent);
     }
-
+    
 
     public void pay(IStrategiaPagamento sp, ActionEvent actionEvent) throws IOException {
         sp.paga(actionEvent);
