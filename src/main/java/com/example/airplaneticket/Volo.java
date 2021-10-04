@@ -5,6 +5,10 @@ import org.w3c.dom.ls.LSOutput;
 import java.time.LocalDate;
 import java.util.Date;
 
+/**
+    Contiene le informazioni inerenti al volo
+*/
+
 public class Volo {
     private String destinazione;
     private String partenza;
