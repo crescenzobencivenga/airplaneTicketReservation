@@ -2,7 +2,9 @@ package com.example.airplaneticket;
 
 import java.sql.SQLException;
 
-/** classe che implementa il proxy per il logging dei comandi eseguiti dall'amministratore
+/** 
+*    @author Morlando Pasquale, Bencivenga Crescenzo
+*   classe che implementa il proxy per il logging dei comandi eseguiti dall'amministratore
 */
 
 public class CommandProxy implements ICommandVoli {
@@ -15,7 +17,7 @@ public class CommandProxy implements ICommandVoli {
     
     /** override del metodo executeCommand che esegue l'executeCommand della classe definita 
     * attraverso il costruttore e chiama il metodo logging
-    @param volo da inserire o eliminare
+    * @param volo da inserire o eliminare
     */
     @Override
     public void executeCommand(Volo v) throws SQLException, ClassNotFoundException {
