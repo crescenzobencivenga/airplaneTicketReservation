@@ -2,7 +2,9 @@ package com.example.airplaneticket;
 
 import java.sql.SQLException;
 
-/* Classe richiamata all'esecuzione di comandi da parte dell'amministratore
+/** 
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* Classe richiamata all'esecuzione di comandi da parte dell'amministratore
 */
 
 public class AggiungiVoloCommand implements ICommandVoli{
