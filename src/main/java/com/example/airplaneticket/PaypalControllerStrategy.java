@@ -10,18 +10,22 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+    Classe che implementa una strategia di pagamento
+*/
+
 public class PaypalControllerStrategy implements IStrategiaPagamento {
     SceneChanger sceneChanger = new SceneChanger();
     public TextField username;
     public PasswordField password;
     public Button btnPaga;
 
-
+    
     @Override
     public void paga(ActionEvent actionEvent) throws IOException {
         sceneChanger.cambiaScena("paypal-view.fxml",742,544,actionEvent);
     }
-
+    
     public void effettuaPagamento(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
         Biglietto bi = Biglietto.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
