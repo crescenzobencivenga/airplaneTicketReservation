@@ -1,6 +1,7 @@
 package com.example.airplaneticket;
 
 /**
+    @author Morlando Pasquale, Bencivenga Crescenzo
     Contiene informazioni inerenti all'utente
 */
 public class Utente {
