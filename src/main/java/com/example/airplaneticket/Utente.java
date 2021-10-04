@@ -1,5 +1,8 @@
 package com.example.airplaneticket;
 
+/**
+    Contiene informazioni inerenti all'utente
+*/
 public class Utente {
     private int id;
     private String username;
