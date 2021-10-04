@@ -3,9 +3,11 @@ package com.example.airplaneticket;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
-/*  Costruttore delle interfacce utente che implementa l'interfaccia ILoginBuilder
-    per la creazione dell'interfaccia per l'admin
-* */
+/** 
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* Costruttore delle interfacce utente che implementa l'interfaccia ILoginBuilder
+* per la creazione dell'interfaccia per l'admin
+*/
 
 
 public class AdminLoginBuilder implements ILoginBuilder {
