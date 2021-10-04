@@ -8,6 +8,11 @@ import java.sql.SQLException;
 public class AggiungiVoloCommand implements ICommandVoli{
     static Volo nuovoVolo;
 
+    
+    
+    /** override execute comand per aggiunta di un volo
+    *   @param volo da inserire
+    */
     @Override
     public void executeCommand(Volo v) throws SQLException, ClassNotFoundException {
         dbConnection con = dbConnection.getInstance();
@@ -18,7 +23,9 @@ public class AggiungiVoloCommand implements ICommandVoli{
         nuovoVolo.setnVolo((con.selectQuery("SELECT MAX(nVolo) AS max from VOLO;")).getInt("max"));
 
     }
-
+    
+    /** override undo command per l'aggiunta di un volo
+    */
     @Override
     public void undoCommand() throws SQLException, ClassNotFoundException {
         dbConnection con = dbConnection.getInstance();
