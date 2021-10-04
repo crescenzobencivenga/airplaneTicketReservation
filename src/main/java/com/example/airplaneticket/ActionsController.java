@@ -4,9 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import java.io.IOException;
 
-/*  Controller class per l'interfaccia utente dove viene selezionato
-    se visualizzare i voli disponibili o visualizzare i biglietti acquistati
-* */
+/** 
+*   @author Morlando Pasquale, Bencivenga Crescenzo
+*    Controller class per l'interfaccia utente dove viene selezionato
+*   se visualizzare i voli disponibili o visualizzare i biglietti acquistati
+*/
 
 public class ActionsController {
     SceneChanger sceneChanger = new SceneChanger();
