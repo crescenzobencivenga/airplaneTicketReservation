@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/** Controller Class dell'interfaccia utente di login
+/** 
+    @author Morlando Pasquale, Bencivenga Crescenzo
+    Controller Class dell'interfaccia utente di login
  *  costruisce l'interfaccia in base al tipo di utente che effettua il login
  * */
 
@@ -23,7 +25,7 @@ public class loginController {
     @FXML
     private PasswordField passwordField;
 
-    /*Metodo collegato al login button che controlla se l'utente esiste all'interno del database e costruisce
+    /* Metodo collegato al login button che controlla se l'utente esiste all'interno del database e costruisce
         attraverso il login director l'interfaccia giusta
     * */
     public void loginButtonAction(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
