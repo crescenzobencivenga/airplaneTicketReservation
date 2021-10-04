@@ -23,6 +23,7 @@ import java.util.ResourceBundle;
 
 
 /**
+    @author Morlando Pasquale, Bencivenga Crescenzo
     Classe controller dell'interfaccia dove vengono visualizzati i voli disponibili
 */
 
