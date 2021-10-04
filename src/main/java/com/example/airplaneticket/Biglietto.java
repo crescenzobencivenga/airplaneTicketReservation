@@ -1,7 +1,9 @@
 package com.example.airplaneticket;
 
 
-/* classe singleton che rappresenta il biglietto selezionato in fase di acquisto
+/**
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* classe singleton che rappresenta il biglietto selezionato in fase di acquisto
 */
 
 public class Biglietto {
@@ -15,8 +17,9 @@ public class Biglietto {
     private int nVolo;
 
     
-    /*metodo che restituisce l'istanza del biglietto se è già istanziato 
-    *altrimenti la istanzia
+    /**
+    * metodo che restituisce l'istanza del biglietto se è già istanziato 
+    * altrimenti la istanzia
     */
     public static Biglietto getInstance(){ 
         if(instance==null){
