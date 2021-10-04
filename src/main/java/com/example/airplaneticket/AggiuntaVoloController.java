@@ -7,8 +7,10 @@ import javafx.stage.Window;
 
 import java.sql.SQLException;
 
-/*  controller class per l'interfaccia che permette all'amministratore di aggigungere voli
-* */
+/**
+* @author Morlando Pasquale, Bencivenga Crescenzo
+* controller class per l'interfaccia che permette all'amministratore di aggigungere voli
+*/
 
 public class AggiuntaVoloController {
     public TextField textPrezzo;
