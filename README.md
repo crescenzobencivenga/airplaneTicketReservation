@@ -8,8 +8,17 @@
 ## Descrizione del progetto
 Si vuole realizzare e sviluppare un sistema per la gestione e la prenotazione di biglietti aerei.
 Si vogliono monitorare i dati persistenti del sistema attraverso un database SQLite. 
-I dati da rendere persistenti sono quelli relativi ai voli, utenti, biglietti acquistati. L’accesso al sistema può avvenire secondo due modalità: amministratore e utente
+I dati da rendere persistenti sono quelli relativi ai voli, utenti, biglietti acquistati. L’accesso al sistema può avvenire secondo due modalità: amministratore e utente.
+L’utente può:
+-	Visualizzare i voli disponibili
+-	Acquistare biglietti con più modalità di pagamento
+-	Visualizzare i biglietti acquistati
 
+Una volta scelto il volo l’utente può effettuare l’acquisto del biglietto relativo ad esso con diversi metodi di pagamento, una volta acquistato il biglietto il sistema memorizza l’acquisto nella tabella bigliettiAcquistati.
+L’amministratore può:
+-	Aggiungere voli
+-	Eliminare voli
+-	Annullare l’ultima operazione effettuata
 
 ### Realizzato con
 - <b>JavaFX</b>:  una famiglia di software applicativi, basati sulla piattaforma Java, per la creazione di rich Internet applications, applicazioni web che hanno tutte le caratteristiche e funzionalità delle comuni applicazioni per computer. Con JavaFX è possibile realizzare delle applicazioni per dispositivi di vario genere e piattaforme.
